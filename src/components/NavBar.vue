@@ -14,11 +14,25 @@
         </v-btn>
     </v-app-bar>
     
-    <v-navigation-drawer app v-model="drawer" class="grey-lighten-4" >
+    <v-navigation-drawer 
+     app v-model="drawer"
+     class="grey-lighten-4" 
+     color="#5500ffa7"
+      >
+      <v-row class="mt-2">
+        <v-col class="">
+                <div class="text-center">
+                    <v-avatar>
+                        <img src="/avatar-1.png" alt="">
+                    </v-avatar>
+                    <p class="white--text">Pyae Phyo Thant</p>
+                </div>
+        </v-col>
+      </v-row>
         <v-list>
       <v-list-item-group
         mandatory
-        color="green"
+        class=""
       >
             <v-list-item v-for="menu in menus" :key="menu.id" :to="menu.route" >
             <v-list-item-icon>
