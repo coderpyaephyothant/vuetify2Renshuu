@@ -18,7 +18,7 @@
         <v-list>
       <v-list-item-group
         mandatory
-        color="warning"
+        color="green"
       >
             <v-list-item v-for="menu in menus" :key="menu.id" :to="menu.route" >
             <v-list-item-icon>
@@ -42,7 +42,7 @@
 export default {
     data(){
         return {
-            drawer:false,
+            drawer:true,
             menus:[
                 {id:1, title:'Dashboard', icon:'mdi mdi-view-dashboard', route:'/'},
                 {id:2, title:'Projects',icon:'mdi mdi-folder', route:'/projects'},
