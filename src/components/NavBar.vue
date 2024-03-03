@@ -8,6 +8,29 @@
             <span>Rush</span>
         </v-toolbar-title>
         <v-spacer></v-spacer>
+
+<!-- Menu Component -->
+
+         <v-menu offset-y>
+      <template v-slot:activator="{ on, attrs }">
+        <v-btn
+          v-bind="attrs"
+          v-on="on"
+          depressed
+          
+        >
+        <v-icon small left class="grey--text">mdi mdi-chevron-down</v-icon>
+          <span class="grey--text">Menu</span>
+        </v-btn>
+      </template>
+      <v-list>
+        <v-list-item
+        v-for="menu in menus" :key="menu.id" :to="menu.route"
+        >
+          <v-list-item-title>{{menu.title}}</v-list-item-title>
+        </v-list-item>
+      </v-list>
+    </v-menu>
         <v-btn depressed>
             <span>サインアウト</span>
             <v-icon right>mdi-exit-to-app</v-icon>
@@ -26,10 +49,11 @@
                         <img src="/avatar-1.png" alt="">
                     </v-avatar>
                     <p class="white--text">Pyae Phyo Thant</p>
+                    <Dialog/>
                 </div>
         </v-col>
       </v-row>
-        <v-list>
+        <v-list class="white--text">
       <v-list-item-group
         mandatory
         class=""
@@ -53,7 +77,11 @@
 </template>
 
 <script>
+import Dialog from './Dialog.vue'
 export default {
+  components:{
+    Dialog
+  },
     data(){
         return {
             drawer:true,

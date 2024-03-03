@@ -1,7 +1,7 @@
 <template>
 <div>
   <h3 class="grey--text">Teams</h3>
-  <v-container fluid>
+  <v-container>
     <v-row>
       <v-col 
       cols="12" 
@@ -31,7 +31,7 @@
               <v-btn
                 color="grey"
                 text
-                flat
+                
           >
                 <v-icon class="mdi mdi-message" small ></v-icon>
                 <span class="grey--text">Message</span>
@@ -53,7 +53,7 @@ export default {
         {id:2, name:'Ko Phoe Ngal', role:'Senior Backend Developer',avator:'/avatar-2.png'},
         {id:3, name:'PaingZay', role:'FullStack Developer',avator:'/avatar-3.png'},
         {id:4, name:'Ko Thein Min Swe', role:'Senior Developer',avator:'/avatar-4.png'},
-        {id:4, name:'Ko Kyaw Thet Aung', role:'Senior Backend Developer',avator:'/avatar-5.png'},
+        {id:5, name:'Ko Kyaw Thet Aung', role:'Senior Backend Developer',avator:'/avatar-5.png'},
       ]
     }
   }

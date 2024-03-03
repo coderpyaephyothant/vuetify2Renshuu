@@ -1,7 +1,7 @@
 <template>
 <div>
   <h3 class="grey--text">Dashboard</h3>
-  <v-container fluid>
+  <v-container>
     <div v-if="projects.length > 0">
       <v-row class="my-2">
         <v-col>
