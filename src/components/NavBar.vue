@@ -1,5 +1,15 @@
 <template>
     <nav>
+      <!-- snackBar -->
+         <v-snackbar
+      v-model="snackbar"
+      color="success"
+      :timeout="timeout"
+      :vertical="true"
+    >
+      {{ text }}
+    </v-snackbar>
+
     <v-app-bar flat app class="">
         <v-app-bar-nav-icon variant="text" @click.stop="drawer = !drawer">
         </v-app-bar-nav-icon>
@@ -49,7 +59,7 @@
                         <img src="/avatar-1.png" alt="">
                     </v-avatar>
                     <p class="white--text">Pyae Phyo Thant</p>
-                    <Dialog/>
+                    <Dialog @successfullyCreated="showMessage"/>
                 </div>
         </v-col>
       </v-row>
@@ -89,8 +99,17 @@ export default {
                 {id:1, title:'Dashboard', icon:'mdi mdi-view-dashboard', route:'/'},
                 {id:2, title:'Projects',icon:'mdi mdi-folder', route:'/projects'},
                 {id:3, title:'Team',icon:'mdi mdi-account-multiple-outline', route:'/teams'},
-            ]
+            ],
+            snackbar:true,
+            text:'Vuetify UI で作りました。',
+            timeout:2000
         }
+    },
+    methods:{
+      showMessage(updatedText){
+        this.snackbar = true
+        this.text = updatedText
+      }
     }
 }
 </script>
